@@ -605,8 +605,15 @@ Calories from Fat 120
             const endTime = new Date();
             const timeDiff = endTime - startTime; //in milliseconds
             const seconds = Math.round(timeDiff / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
 
-            window.location.href = `results.html?time=${seconds}`;
+            const timeString = `${minutes} minutes and ${remainingSeconds} seconds`;
+
+            alert(`Thank you for completing the survey.\n\nTime taken: ${timeString}.\n\nPlease email this time to rmhical@ucl.ac.uk`);
+
+            // You can uncomment the line below to submit the form after the user sees the alert.
+            // event.target.submit();
         });
     </script>
 
