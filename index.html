@@ -3,74 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Literacy Questionnaire</title>
+    <title>Adult Social Care Questionnaire</title>
     <style>
         body { font-family: sans-serif; line-height: 1.6; margin: 20px; }
         h1, h2, h3 { color: #333; }
         .question { margin-bottom: 20px; }
-        .question p { margin: 0 0 10px; }
-        label { display: block; margin-bottom: 5px; }
-        .options label { display: inline-block; margin-right: 20px; }
-        input[type="text"], input[type="email"] { width: 300px; padding: 5px; }
-        .section { border-top: 2px solid #ccc; padding-top: 20px; margin-top: 30px; }
+        .question-title { font-weight: bold; }
+        .options label { display: block; margin-bottom: 5px; }
+        .image-container { margin-top: 10px; }
     </style>
 </head>
 <body>
 
     <h1>Adult Social Care Questionnaire</h1>
 
+    <!-- v2 for steering committee Adult Social Care Questionnaire -->
     <form>
-
-        <div class="section" id="v2-questionnaire">
-            <h2>Part 1: About You and Your Work</h2>
-
-            <h3>Screening questions</h3>
-            <div class="question">
-                <p>Do you work in a non-nursing residential care home or in non-nursing wing of a residential care home, for older age adults, in England?</p>
-                <label><input type="radio" name="screening_q1" value="yes"> Yes</label>
-                <label><input type="radio" name="screening_q1" value="no"> No</label>
+        <h2>Screening questions</h2>
+        <div class="question">
+            <p class="question-title">Do you work in a non-nursing residential care home or in non-nursing wing of a residential care home, for older age adults, in England?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="yes"> Yes</label>
+                <label><input type="radio" name="q1" value="no"> No</label>
             </div>
-
-            <div class="question">
-                <p>Are you a registered social worker or a registered healthcare professional or have or are doing training to for one of these roles, either in the UK or abroad? (e.g. nurse, physiotherapist, occupational therapist, social worker, medical student).</p>
-                <label><input type="radio" name="screening_q2" value="yes"> Yes</label>
-                <label><input type="radio" name="screening_q2" value="no"> No</label>
+        </div>
+        <div class="question">
+            <p class="question-title">Are you a registered social worker or a registered healthcare professional or have or are doing training to for one of these roles, either in the UK or abroad? (e.g. nurse, physiotherapist, occupational therapist, social worker, medical student).</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="yes"> Yes</label>
+                <label><input type="radio" name="q2" value="no"> No</label>
             </div>
-
-            <div class="question">
-                <p>Have you completed mandatory training requirements at the care home you work at?</p>
-                <label><input type="radio" name="screening_q3" value="yes"> Yes</label>
-                <label><input type="radio" name="screening_q3" value="no"> No</label>
+        </div>
+        <div class="question">
+            <p class="question-title">Have you completed mandatory training requirements at the care home you work at?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="yes"> Yes</label>
+                <label><input type="radio" name="q3" value="no"> No</label>
             </div>
-
-            <div class="question">
-                <p>Do you read hospital discharge summaries as part of your role?</p>
-                <label><input type="radio" name="screening_q4" value="yes"> Yes</label>
-                <label><input type="radio" name="screening_q4" value="no"> No</label>
+        </div>
+        <div class="question">
+            <p class="question-title">Do you read hospital discharge summaries as part of your role?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="yes"> Yes</label>
+                <label><input type="radio" name="q4" value="no"> No</label>
             </div>
+        </div>
 
-            <h3>Demographics</h3>
-            <div class="question">
-                <label for="age">1. What is your age?</label>
-                <input type="text" id="age" name="age">
-            </div>
-
-            <div class="question">
-                <p>2. What is your gender identity?</p>
+        <h2>Demographics</h2>
+        <div class="question">
+            <label class="question-title" for="age">1. What is your age?</label>
+            <input type="text" id="age" name="age">
+        </div>
+        <div class="question">
+            <p class="question-title">2. What is your gender identity?</p>
+            <div class="options">
                 <label><input type="radio" name="gender" value="male"> Male</label>
                 <label><input type="radio" name="gender" value="female"> Female</label>
                 <label><input type="radio" name="gender" value="other"> Other</label>
                 <label><input type="radio" name="gender" value="prefer_not_to_say"> Prefer not to say</label>
             </div>
-
-            <div class="question">
-                <p>3. What is your main language? [Source: Census 2021 (Office for National Statistics, 2020)]</p>
+        </div>
+        <div class="question">
+            <p class="question-title">3. What is your main language? [Source: Census 2021 (Office for National Statistics, 2020)]</p>
+            <div class="options">
                 <label><input type="radio" name="language" value="english"> English</label>
-                <label>Other, write in: <input type="text" name="language_other"></label>
+                <label>Other, write in <input type="text" name="language_other"></label>
             </div>
-
-            <div class="question">
-                <p>4. What is your ethnicity? [Source: adapted from Skills for Care, Appendix A(skillsforcare, n.d.)]</p>
+        </div>
+        <div class="question">
+            <p class="question-title">4. What is your ethnicity? [Source: adapted from Skills for Care, Appendix A(skillsforcare, n.d.)]</p>
+            <div class="options">
                 <p><strong>White</strong></p>
                 <label><input type="radio" name="ethnicity" value="white_english"> English/Welsh/Scottish/Northern Irish/British</label>
                 <label><input type="radio" name="ethnicity" value="white_irish"> Irish</label>
@@ -91,148 +93,151 @@
                 <label><input type="radio" name="ethnicity" value="black_african"> African</label>
                 <label><input type="radio" name="ethnicity" value="black_caribbean"> Caribbean</label>
                 <label><input type="radio" name="ethnicity" value="black_other"> Any other Black/African/Caribbean background</label>
-                <p><strong>Other</strong></p>
                 <label><input type="radio" name="ethnicity" value="other_arab"> Arab</label>
                 <label><input type="radio" name="ethnicity" value="other_ethnic_group"> Any other ethnic group</label>
                 <label><input type="radio" name="ethnicity" value="prefer_not_to_say"> Prefer not to stay</label>
             </div>
+        </div>
+        <div class="question">
+            <p class="question-title">5. What is your country of birth? [Source: Census 2021]</p>
+            <div class="options">
+                <label><input type="radio" name="country_of_birth" value="england"> England</label>
+                <label><input type="radio" name="country_of_birth" value="wales"> Wales</label>
+                <label><input type="radio" name="country_of_birth" value="scotland"> Scotland</label>
+                <label><input type="radio" name="country_of_birth" value="northern_ireland"> Northern Ireland</label>
+                <label><input type="radio" name="country_of_birth" value="republic_of_ireland"> Republic of Ireland</label>
+                <label>Elsewhere, write in current name of the country <input type="text" name="country_of_birth_other"></label>
+            </div>
+        </div>
 
-            <div class="question">
-                <p>5. What is your country of birth? [Source: Census 2021]</p>
-                <label><input type="radio" name="birth_country" value="england"> England</label>
-                <label><input type="radio" name="birth_country" value="wales"> Wales</label>
-                <label><input type="radio" name="birth_country" value="scotland"> Scotland</label>
-                <label><input type="radio" name="birth_country" value="northern_ireland"> Northern Ireland</label>
-                <label><input type="radio" name="birth_country" value="republic_of_ireland"> Republic of Ireland</label>
-                <label>Elsewhere, write in current name of the country: <input type="text" name="birth_country_other"></label>
+        <h2>Skills</h2>
+        <div class="question">
+            <p class="question-title">On a scale of 0 to 10, where 0 is "Not at all confident" and 10 is "Very confident", how confident are you working with numbers at work? (Please select the option that best applies)</p>
+            <div class="options">
+                <label><input type="radio" name="confidence_numbers" value="0"> 0 - Not at all confident</label>
+                <label><input type="radio" name="confidence_numbers" value="1"> 1</label>
+                <label><input type="radio" name="confidence_numbers" value="2"> 2</label>
+                <label><input type="radio" name="confidence_numbers" value="3"> 3</label>
+                <label><input type="radio" name="confidence_numbers" value="4"> 4</label>
+                <label><input type="radio" name="confidence_numbers" value="5"> 5</label>
+                <label><input type="radio" name="confidence_numbers" value="6"> 6</label>
+                <label><input type="radio" name="confidence_numbers" value="7"> 7</label>
+                <label><input type="radio" name="confidence_numbers" value="8"> 8</label>
+                <label><input type="radio" name="confidence_numbers" value="9"> 9</label>
+                <label><input type="radio" name="confidence_numbers" value="10"> 10 - Very confident</label>
+                <label><input type="radio" name="confidence_numbers" value="dont_know"> Don't know</label>
+                <label><input type="radio" name="confidence_numbers" value="prefer_not_to_say"> Prefer not to say</label>
             </div>
-
-            <h3>Skills</h3>
-            <div class="question">
-                <p>On a scale of 0 to 10, where 0 is "Not at all confident" and 10 is "Very confident", how confident are you working with numbers at work? (Please select the option that best applies)</p>
-                <div class="options">
-                    <label><input type="radio" name="confidence_numbers" value="0"> 0</label>
-                    <label><input type="radio" name="confidence_numbers" value="1"> 1</label>
-                    <label><input type="radio" name="confidence_numbers" value="2"> 2</label>
-                    <label><input type="radio" name="confidence_numbers" value="3"> 3</label>
-                    <label><input type="radio" name="confidence_numbers" value="4"> 4</label>
-                    <label><input type="radio" name="confidence_numbers" value="5"> 5</label>
-                    <label><input type="radio" name="confidence_numbers" value="6"> 6</label>
-                    <label><input type="radio" name="confidence_numbers" value="7"> 7</label>
-                    <label><input type="radio" name="confidence_numbers" value="8"> 8</label>
-                    <label><input type="radio" name="confidence_numbers" value="9"> 9</label>
-                    <label><input type="radio" name="confidence_numbers" value="10"> 10</label>
-                    <label><input type="radio" name="confidence_numbers" value="dont_know"> Don't know</label>
-                    <label><input type="radio" name="confidence_numbers" value="prefer_not_to_say"> Prefer not to say</label>
-                </div>
+        </div>
+        <div class="question">
+            <p class="question-title">On a scale of 0 to 10, where 0 is "Not at all confident" and 10 is "Very confident", how confident are you using reading and writing skills at work? (Please select the option that best applies)</p>
+            <div class="options">
+                <label><input type="radio" name="confidence_reading_writing" value="0"> 0 - Not at all confident</label>
+                <label><input type="radio" name="confidence_reading_writing" value="1"> 1</label>
+                <label><input type="radio" name="confidence_reading_writing" value="2"> 2</label>
+                <label><input type="radio" name="confidence_reading_writing" value="3"> 3</label>
+                <label><input type="radio" name="confidence_reading_writing" value="4"> 4</label>
+                <label><input type="radio" name="confidence_reading_writing" value="5"> 5</label>
+                <label><input type="radio" name="confidence_reading_writing" value="6"> 6</label>
+                <label><input type="radio" name="confidence_reading_writing" value="7"> 7</label>
+                <label><input type="radio" name="confidence_reading_writing" value="8"> 8</label>
+                <label><input type="radio" name="confidence_reading_writing" value="9"> 9</label>
+                <label><input type="radio" name="confidence_reading_writing" value="10"> 10 - Very confident</label>
+                <label><input type="radio" name="confidence_reading_writing" value="dont_know"> Don't know</label>
+                <label><input type="radio" name="confidence_reading_writing" value="prefer_not_to_say"> Prefer not to say</label>
             </div>
-            <div class="question">
-                <p>On a scale of 0 to 10, where 0 is "Not at all confident" and 10 is "Very confident", how confident are you using reading and writing skills at work? (Please select the option that best applies)</p>
-                 <div class="options">
-                    <label><input type="radio" name="confidence_reading" value="0"> 0</label>
-                    <label><input type="radio" name="confidence_reading" value="1"> 1</label>
-                    <label><input type="radio" name="confidence_reading" value="2"> 2</label>
-                    <label><input type="radio" name="confidence_reading" value="3"> 3</label>
-                    <label><input type="radio" name="confidence_reading" value="4"> 4</label>
-                    <label><input type="radio" name="confidence_reading" value="5"> 5</label>
-                    <label><input type="radio" name="confidence_reading" value="6"> 6</label>
-                    <label><input type="radio" name="confidence_reading" value="7"> 7</label>
-                    <label><input type="radio" name="confidence_reading" value="8"> 8</label>
-                    <label><input type="radio" name="confidence_reading" value="9"> 9</label>
-                    <label><input type="radio" name="confidence_reading" value="10"> 10</label>
-                    <label><input type="radio" name="confidence_reading" value="dont_know"> Don't know</label>
-                    <label><input type="radio" name="confidence_reading" value="prefer_not_to_say"> Prefer not to say</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>On a scale of 1-5, where 1 means very poor and 5 means very good, how would you rate each of the following? (Please select an option on each row)</p>
-                <p>My reading and writing skills</p>
-                <label><input type="radio" name="reading_writing_skills" value="5"> 5 - Very good</label>
-                <label><input type="radio" name="reading_writing_skills" value="4"> 4 - Fairly good</label>
-                <label><input type="radio" name="reading_writing_skills" value="3"> 3 - Neither good nor poor</label>
-                <label><input type="radio" name="reading_writing_skills" value="2"> 2 - Fairly poor</label>
-                <label><input type="radio" name="reading_writing_skills" value="1"> 1 - Very poor</label>
-                <label><input type="radio" name="reading_writing_skills" value="dont_know"> Don't know</label>
-                <label><input type="radio" name="reading_writing_skills" value="prefer_not_to_say"> Prefer not to say</label>
-            </div>
-             <div class="question">
-                <p>My maths and numeracy skills</p>
+        </div>
+        <div class="question">
+            <p class="question-title">On a scale of 1-5, where 1 means very poor and 5 means very good, how would you rate your maths and numeracy skills</p>
+            <div class="options">
                 <label><input type="radio" name="maths_numeracy_skills" value="5"> 5 - Very good</label>
                 <label><input type="radio" name="maths_numeracy_skills" value="4"> 4 - Fairly good</label>
                 <label><input type="radio" name="maths_numeracy_skills" value="3"> 3 - Neither good nor poor</label>
                 <label><input type="radio" name="maths_numeracy_skills" value="2"> 2 - Fairly poor</label>
                 <label><input type="radio" name="maths_numeracy_skills" value="1"> 1 - Very poor</label>
                 <label><input type="radio" name="maths_numeracy_skills" value="dont_know"> Don't know</label>
-                <label><input type="radio" name="maths_numeracy_skills" value="prefer_not_to_say"> Prefer not to say</label>
             </div>
-
-            <div class="question">
-                <p>What is your highest level of qualification? [Source: based on census 2021 answer classification]</p>
-                <label><input type="radio" name="qualification" value="none"> No qualifications</label>
-                <label><input type="radio" name="qualification" value="level1"> Level 1 and entry level qualifications: 1 to 4 GCSEs grade A* to C, Any GCSEs at other grades, O levels or CSEs (any grades), 1 AS level, NVQ level 1, Foundation GNVQ, Basic or Essential Skills</label>
-                <label><input type="radio" name="qualification" value="level2"> Level 2 qualifications: 5 or more GCSEs (A* to C or 9 to 4), O levels (passes), CSEs (grade 1), School Certification, 1 A level, 2 to 3 AS levels, VCEs, Intermediate or Higher Diploma, Welsh Baccalaureate Intermediate Diploma, NVQ level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First or General Diploma, RSA Diploma Apprenticeship</label>
-                <label><input type="radio" name="qualification" value="level3"> Level 3 qualifications: 2 or more A levels or VCEs, 4 or more AS levels, Higher School Certificate, Progression or Advanced Diploma, Welsh Baccalaureate Advance Diploma, NVQ level 3; Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma</label>
-                <label><input type="radio" name="qualification" value="level4"> Level 4 qualifications or above: degree (BA, BSc), higher degree (MA, PhD, PGCE), NVQ level 4 to 5, HNC, HND, RSA Higher Diploma, BTEC Higher level, professional qualifications (for example, teaching, nursing, accountancy)</label>
+        </div>
+        <div class="question">
+            <p class="question-title">How good a reader do you think you are?</p>
+            <div class="options">
+                <label><input type="radio" name="reading_skill" value="excellent"> Excellent</label>
+                <label><input type="radio" name="reading_skill" value="good"> Good</label>
+                <label><input type="radio" name="reading_skill" value="average"> Average</label>
+                <label><input type="radio" name="reading_skill" value="poor"> Poor</label>
+                <label><input type="radio" name="reading_skill" value="very_poor"> Very poor</label>
+            </div>
+        </div>
+        <div class="question">
+            <p class="question-title">What is your highest level of qualification? [Source: based on census 2021 answer classification]</p>
+            <div class="options">
+                <label><input type="radio" name="qualification" value="no_qualifications"> No qualifications</label>
+                <label><input type="radio" name="qualification" value="level_1"> Level 1 and entry level qualifications: 1 to 4 GCSEs grade A* to C, Any GCSEs at other grades, O levels or CSEs (any grades), 1 AS level, NVQ level 1, Foundation GNVQ, Basic or Essential Skills</label>
+                <label><input type="radio" name="qualification" value="level_2"> Level 2 qualifications: 5 or more GCSEs (A* to C or 9 to 4), O levels (passes), CSEs (grade 1), School Certification, 1 A level, 2 to 3 AS levels, VCEs, Intermediate or Higher Diploma, Welsh Baccalaureate Intermediate Diploma, NVQ level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First or General Diploma, RSA Diploma Apprenticeship</label>
+                <label><input type="radio" name="qualification" value="level_3"> Level 3 qualifications: 2 or more A levels or VCEs, 4 or more AS levels, Higher School Certificate, Progression or Advanced Diploma, Welsh Baccalaureate Advance Diploma, NVQ level 3; Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma</label>
+                <label><input type="radio" name="qualification" value="level_4"> Level 4 qualifications or above: degree (BA, BSc), higher degree (MA, PhD, PGCE), NVQ level 4 to 5, HNC, HND, RSA Higher Diploma, BTEC Higher level, professional qualifications (for example, teaching, nursing, accountancy)</label>
                 <label><input type="radio" name="qualification" value="other"> Other: vocational or work-related qualifications, other qualifications achieved in England or Wales, qualifications achieved outside England or Wales (equivalent not stated or unknown)</label>
             </div>
-
-            <div class="question">
-                <p>3. Do you have a qualification relevant to social care? [Source: adapted from Skills for Care]</p>
+        </div>
+        <div class="question">
+            <p class="question-title">3. Do you have a qualification relevant to social care? [Source: adapted from Skills for Care]</p>
+            <div class="options">
                 <label><input type="radio" name="social_care_qualification" value="yes"> Yes</label>
                 <label><input type="radio" name="social_care_qualification" value="no"> No</label>
             </div>
+        </div>
+        <div class="question">
+            <p class="question-title">4. How confident do you feel about using these digital tools?</p>
+            <p>Please rate each item on a scale of 1 (very confident) to 5 (not at all confident).</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>1 (not at all confident)</th>
+                    <th>2</th>
+                    <th>3 (somewhat confident)</th>
+                    <th>4</th>
+                    <th>5 (very confident)</th>
+                    <th>Not sure what this tool is</th>
+                </tr>
+                <tr>
+                    <td>QR codes</td>
+                    <td><input type="radio" name="qr_codes" value="1"></td>
+                    <td><input type="radio" name="qr_codes" value="2"></td>
+                    <td><input type="radio" name="qr_codes" value="3"></td>
+                    <td><input type="radio" name="qr_codes" value="4"></td>
+                    <td><input type="radio" name="qr_codes" value="5"></td>
+                    <td><input type="radio" name="qr_codes" value="not_sure"></td>
+                </tr>
+                <tr>
+                    <td>URL (web address e.g. www.nhs.uk)</td>
+                    <td><input type="radio" name="url" value="1"></td>
+                    <td><input type="radio" name="url" value="2"></td>
+                    <td><input type="radio" name="url" value="3"></td>
+                    <td><input type="radio" name="url" value="4"></td>
+                    <td><input type="radio" name="url" value="5"></td>
+                    <td><input type="radio" name="url" value="not_sure"></td>
+                </tr>
+                <tr>
+                    <td>Patient portal</td>
+                    <td><input type="radio" name="patient_portal" value="1"></td>
+                    <td><input type="radio" name="patient_portal" value="2"></td>
+                    <td><input type="radio" name="patient_portal" value="3"></td>
+                    <td><input type="radio" name="patient_portal" value="4"></td>
+                    <td><input type="radio" name="patient_portal" value="5"></td>
+                    <td><input type="radio" name="patient_portal" value="not_sure"></td>
+                </tr>
+            </table>
+        </div>
 
-            <div class="question">
-                <p>4. How confident do you feel about using these digital tools?</p>
-                <p>Please rate each item on a scale of 1 (very confident) to 5 (not at all confident).</p>
-                <table>
-                    <tr>
-                        <th>Tool</th>
-                        <th>1 (not at all confident)</th>
-                        <th>2</th>
-                        <th>3 (somewhat confident)</th>
-                        <th>4</th>
-                        <th>5 (very confident)</th>
-                        <th>Not sure what this tool is</th>
-                    </tr>
-                    <tr>
-                        <td>QR codes</td>
-                        <td><input type="radio" name="digital_qr" value="1"></td>
-                        <td><input type="radio" name="digital_qr" value="2"></td>
-                        <td><input type="radio" name="digital_qr" value="3"></td>
-                        <td><input type="radio" name="digital_qr" value="4"></td>
-                        <td><input type="radio" name="digital_qr" value="5"></td>
-                        <td><input type="radio" name="digital_qr" value="not_sure"></td>
-                    </tr>
-                    <tr>
-                        <td>URL (web address e.g. www.nhs.uk)</td>
-                        <td><input type="radio" name="digital_url" value="1"></td>
-                        <td><input type="radio" name="digital_url" value="2"></td>
-                        <td><input type="radio" name="digital_url" value="3"></td>
-                        <td><input type="radio" name="digital_url" value="4"></td>
-                        <td><input type="radio" name="digital_url" value="5"></td>
-                        <td><input type="radio" name="digital_url" value="not_sure"></td>
-                    </tr>
-                    <tr>
-                        <td>Patient portal</td>
-                        <td><input type="radio" name="digital_portal" value="1"></td>
-                        <td><input type="radio" name="digital_portal" value="2"></td>
-                        <td><input type="radio" name="digital_portal" value="3"></td>
-                        <td><input type="radio" name="digital_portal" value="4"></td>
-                        <td><input type="radio" name="digital_portal" value="5"></td>
-                        <td><input type="radio" name="digital_portal" value="not_sure"></td>
-                    </tr>
-                </table>
-            </div>
-
-            <h3>Workplace</h3>
-            <div class="question">
-                <label for="care_home_name">1. What is the name of the non-nursing care home you currently work at? If you work at more than one care home choose the care home you have worked at the most.</label>
-                <input type="text" id="care_home_name" name="care_home_name">
-            </div>
-
-            <div class="question">
-                <p>2. What is your main job role in the care home? [Source: adapted, Skills for Care ‘Main job role’]</p>
+        <h2>Workplace</h2>
+        <div class="question">
+            <label class="question-title" for="care_home_name">1. What is the name of the non-nursing care home you currently work at? If you work at more than one care home choose the care home you have worked at the most.</label>
+            <p>Why are we asking this question? We want to make sure we collect data from a range of care homes across the country and look at the impact of care home characteristics such as size.</p>
+            <input type="text" id="care_home_name" name="care_home_name">
+        </div>
+        <div class="question">
+            <p class="question-title">2. What is your main job role in the care home? [Source: adapted, Skills for Care ‘Main job role']</p>
+            <div class="options">
                 <label><input type="radio" name="job_role" value="qualified_nurse"> Qualified nurse</label>
                 <label><input type="radio" name="job_role" value="support_outreach"> Support and outreach (direct care)</label>
                 <label><input type="radio" name="job_role" value="care_worker"> Care worker (direct care)</label>
@@ -242,264 +247,274 @@
                 <label><input type="radio" name="job_role" value="other_manager"> Other (manager)</label>
                 <label><input type="radio" name="job_role" value="other_direct_care"> Other (direct care)</label>
             </div>
-
-            <div class="question">
-                <p>3. How long have you worked in adult social care, in any role? [Source: adapted, Skills for Care]</p>
-                <label><input type="radio" name="experience" value="less_than_1"> Less than a year</label>
-                <label><input type="radio" name="experience" value="1_to_3"> 1-3 years</label>
-                <label><input type="radio" name="experience" value="3_to_9"> 3 to 9 years</label>
-                <label><input type="radio" name="experience" value="more_than_10"> More than 10 years</label>
-            </div>
-
-            <h3>Discharge summaries</h3>
-            <div class="question">
-                <p>1. How easy do you find it to understand hospital discharge summaries?</p>
-                <label><input type="radio" name="discharge_ease" value="1"> 1- Very difficult to understand</label>
-                <label><input type="radio" name="discharge_ease" value="2"> 2- Difficult to understand</label>
-                <label><input type="radio" name="discharge_ease" value="3"> 3- Neutral</label>
-                <label><input type="radio" name="discharge_ease" value="4"> 4- Easy to understand</label>
-                <label><input type="radio" name="discharge_ease" value="5"> 5- Very easy to understand</label>
-            </div>
-            <div class="question">
-                <label for="discharge_rating_reason">Why did you give this rating? (free text)</label>
-                <textarea id="discharge_rating_reason" name="discharge_rating_reason" rows="4" cols="50"></textarea>
+        </div>
+        <div class="question">
+            <p class="question-title">3. How long have you worked in adult social care, in any role? [Source: adapted, Skills for Care]</p>
+            <div class="options">
+                <label><input type="radio" name="experience" value="less_than_a_year"> Less than a year</label>
+                <label><input type="radio" name="experience" value="1_3_years"> 1-3 years</label>
+                <label><input type="radio" name="experience" value="3_9_years"> 3 to 9 years</label>
+                <label><input type="radio" name="experience" value="more_than_10_years"> More than 10 years</label>
             </div>
         </div>
 
-
-        <div class="section" id="fhlt">
-            <h2>Part 2: The Generic Functional Health Literacy Test (FHLT)</h2>
-            <p>The following passage is selected from a health education material published by the Singapore Health Promotion Board. Please select only 1 word you consider as the most appropriate from the 3 candidate items for each question.</p>
-
-            <div class="question">
-                <p>1. When you receive medicine from your pharmacist or doctor, you must understand fully how to use your medicine before you leave. Listen carefully to the 
-                    <select name="fhlt_q1">
-                        <option value="speech">speech</option>
-                        <option value="instructions">instructions</option>
-                        <option value="then">then</option>
-                    </select> 
-                    and check against the 
-                    <select name="fhlt_q2">
-                        <option value="label">label</option>
-                        <option value="poster">poster</option>
-                        <option value="stand">stand</option>
-                    </select> 
-                    on the medicine container. 
-                    <select name="fhlt_q3">
-                        <option value="Wonder">Wonder</option>
-                        <option value="Ask">Ask</option>
-                        <option value="Listen">Listen</option>
-                    </select> 
-                    when you do not 
-                    <select name="fhlt_q4">
-                        <option value="read">read</option>
-                        <option value="understand">understand</option>
-                        <option value="play">play</option>
-                    </select> 
-                    the instructions or when 
-                    <select name="fhlt_q5">
-                        <option value="they">they</option>
-                        <option value="we">we</option>
-                        <option value="yours">yours</option>
-                    </select> 
-                    are not clear. You 
-                    <select name="fhlt_q6">
-                        <option value="need">need</option>
-                        <option value="should">should</option>
-                        <option value="well">well</option>
-                    </select> 
-                    know the following: Name 
-                    <select name="fhlt_q7">
-                        <option value="thus">thus</option>
-                        <option value="and">and</option>
-                        <option value="or">or</option>
-                    </select> 
-                    strength of the medicine, 
-                    <select name="fhlt_q8">
-                        <option value="Aim">Aim</option>
-                        <option value="Purpose">Purpose</option>
-                        <option value="Right">Right</option>
-                    </select> 
-                    of the medicine, Directions 
-                    <select name="fhlt_q9">
-                        <option value="to">to</option>
-                        <option value="for">for</option>
-                        <option value="and">and</option>
-                    </select> 
-                    use, Any activity, food and 
-                    <select name="fhlt_q10">
-                        <option value="others">others</option>
-                        <option value="other">other</option>
-                        <option value="which">which</option>
-                    </select> 
-                    medicines to be avoided, 
-                    <select name="fhlt_q11">
-                        <option value="How">How</option>
-                        <option value="Any">Any</option>
-                        <option value="An">An</option>
-                    </select> 
-                    side effects to look 
-                    <select name="fhlt_q12">
-                        <option value="up">up</option>
-                        <option value="out">out</option>
-                        <option value="to">to</option>
-                    </select> 
-                    for.
-                </p>
-            </div>
-             <div class="question">
-                <p>2. Be sure you 
-                    <select name="fhlt_q13">
-                        <option value="track">track</option>
-                        <option value="follow">follow</option>
-                        <option value="ignore">ignore</option>
-                    </select> 
-                    the instructions. Do not 
-                    <select name="fhlt_q14">
-                        <option value="overwhelm">overwhelm</option>
-                        <option value="exceed">exceed</option>
-                        <option value="reach">reach</option>
-                    </select> 
-                    the stated dose or 
-                    <select name="fhlt_q15">
-                        <option value="mass">mass</option>
-                        <option value="treatment">treatment</option>
-                        <option value="illness">illness</option>
-                    </select> 
-                    period.
-                </p>
-            </div>
-             <div class="question">
-                <p>3. If you are 
-                    <select name="fhlt_q16">
-                        <option value="eating">eating</option>
-                        <option value="prescribed">prescribed</option>
-                        <option value="stating">stating</option>
-                    </select> 
-                    antibiotics, make sure you 
-                    <select name="fhlt_q17">
-                        <option value="complete">complete</option>
-                        <option value="end">end</option>
-                        <option value="stop">stop</option>
-                    </select> 
-                    the prescription.
-                </p>
-            </div>
-             <div class="question">
-                <p>4. Discard expired 
-                    <select name="fhlt_q18">
-                        <option value="medicines">medicines</option>
-                        <option value="utensils">utensils</option>
-                        <option value="drinks">drinks</option>
-                    </select> 
-                    as they may no 
-                    <select name="fhlt_q19">
-                        <option value="shorter">shorter</option>
-                        <option value="less">less</option>
-                        <option value="longer">longer</option>
-                    </select> 
-                    be effective.
-                </p>
-            </div>
-             <div class="question">
-                <p>5. Please always 
-                    <select name="fhlt_q20">
-                        <option value="interact">interact</option>
-                        <option value="check">check</option>
-                        <option value="ask">ask</option>
-                    </select> 
-                    with your pharmacist before 
-                    <select name="fhlt_q21">
-                        <option value="finishing">finishing</option>
-                        <option value="taking">taking</option>
-                        <option value="learning">learning</option>
-                    </select> 
-                    any over-the-counter medicines
-                </p>
+        <h2>Discharge summaries</h2>
+        <div class="question">
+            <p class="question-title">1. How easy do you find it to understand hospital discharge summaries?</p>
+            <div class="options">
+                <label><input type="radio" name="discharge_summary_ease" value="1"> 1- Very difficult to understand</label>
+                <label><input type="radio" name="discharge_summary_ease" value="2"> 2- Difficult to understand</label>
+                <label><input type="radio" name="discharge_summary_ease" value="3"> 3- Neutral</label>
+                <label><input type="radio" name="discharge_summary_ease" value="4"> 4- Easy to understand</label>
+                <label><input type="radio" name="discharge_summary_ease" value="5"> 5- Very easy to understand</label>
             </div>
         </div>
+        <div class="question">
+            <label class="question-title" for="rating_reason">Why did you give this rating?</label>
+            <textarea id="rating_reason" name="rating_reason" rows="4" cols="50"></textarea>
+        </div>
 
+        <h2>Validated measures</h2>
+        <p>Participants will then complete:</p>
+        <ul>
+            <li>Health literacy questionnaire</li>
+            <li>Health numeracy questionnaire</li>
+            <li>Ehealth literacy questionnaire</li>
+        </ul>
 
-        <div class="section" id="heals">
-            <h2>Part 3: eHealth Literacy Scale (eHEALS)</h2>
-            <p>I would like to ask you for your opinion and about your experience using the Internet for health information. For each statement, tell me which response best reflects your opinion and experience right now.</p>
+        <!-- FHLT.pdf -->
+        <h2>The Generic Functional Health Literacy Test (FHLT)</h2>
+        <p>The following passage is selected from a health education material published by the Singapore Health Promotion Board. Please select only 1 word you consider as the most appropriate from the 3 candidate items for each question.</p>
+        <div class="question">
+            <p>1. When you receive medicine from your pharmacist or doctor, you must understand fully how to use your medicine before you leave. Listen carefully to the
+                <select name="fhlt_q1">
+                    <option value="speech">speech</option>
+                    <option value="instructions">instructions</option>
+                    <option value="then">then</option>
+                </select>
+                and check against the
+                <select name="fhlt_q2">
+                    <option value="label">label</option>
+                    <option value="poster">poster</option>
+                    <option value="stand">stand</option>
+                </select>
+                on the medicine container.
+                <select name="fhlt_q3">
+                    <option value="Wonder">Wonder</option>
+                    <option value="Ask">Ask</option>
+                    <option value="Listen">Listen</option>
+                </select>
+                when you do not
+                <select name="fhlt_q4">
+                    <option value="read">read</option>
+                    <option value="understand">understand</option>
+                    <option value="play">play</option>
+                </select>
+                the instructions or when
+                <select name="fhlt_q5">
+                    <option value="they">they</option>
+                    <option value="we">we</option>
+                    <option value="yours">yours</option>
+                </select>
+                are not clear. You
+                <select name="fhlt_q6">
+                    <option value="need">need</option>
+                    <option value="should">should</option>
+                    <option value="well">well</option>
+                </select>
+                know the following: Name
+                <select name="fhlt_q7">
+                    <option value="thus">thus</option>
+                    <option value="and">and</option>
+                    <option value="or">or</option>
+                </select>
+                strength of the medicine,
+                <select name="fhlt_q8">
+                    <option value="Aim">Aim</option>
+                    <option value="Purpose">Purpose</option>
+                    <option value="Right">Right</option>
+                </select>
+                of the medicine, Directions
+                <select name="fhlt_q9">
+                    <option value="to">to</option>
+                    <option value="for">for</option>
+                    <option value="and">and</option>
+                </select>
+                use, Any activity, food and
+                <select name="fhlt_q10">
+                    <option value="others">others</option>
+                    <option value="other">other</option>
+                    <option value="which">which</option>
+                </select>
+                medicines to be avoided,
+                <select name="fhlt_q11">
+                    <option value="How">How</option>
+                    <option value="Any">Any</option>
+                    <option value="An">An</option>
+                </select>
+                side effects to look
+                <select name="fhlt_q12">
+                    <option value="up">up</option>
+                    <option value="out">out</option>
+                    <option value="to">to</option>
+                </select>
+                for.</p>
+            <p>2. Be sure you
+                <select name="fhlt_q13">
+                    <option value="track">track</option>
+                    <option value="follow">follow</option>
+                    <option value="ignore">ignore</option>
+                </select>
+                the instructions. Do not
+                <select name="fhlt_q14">
+                    <option value="overwhelm">overwhelm</option>
+                    <option value="exceed">exceed</option>
+                    <option value="reach">reach</option>
+                </select>
+                the stated dose or
+                <select name="fhlt_q15">
+                    <option value="mass">mass</option>
+                    <option value="treatment">treatment</option>
+                    <option value="illness">illness</option>
+                </select>
+                period.</p>
+            <p>3. If you are
+                <select name="fhlt_q16">
+                    <option value="eating">eating</option>
+                    <option value="prescribed">prescribed</option>
+                    <option value="stating">stating</option>
+                </select>
+                antibiotics, make sure you
+                <select name="fhlt_q17">
+                    <option value="complete">complete</option>
+                    <option value="end">end</option>
+                    <option value="stop">stop</option>
+                </select>
+                the prescription.</p>
+            <p>4. Discard expired
+                <select name="fhlt_q18">
+                    <option value="medicines">medicines</option>
+                    <option value="utensils">utensils</option>
+                    <option value="drinks">drinks</option>
+                </select>
+                as they may no
+                <select name="fhlt_q19">
+                    <option value="shorter">shorter</option>
+                    <option value="less">less</option>
+                    <option value="longer">longer</option>
+                </select>
+                be effective.</p>
+            <p>5. Please always
+                <select name="fhlt_q20">
+                    <option value="interact">interact</option>
+                    <option value="check">check</option>
+                    <option value="ask">ask</option>
+                </select>
+                with your pharmacist before
+                <select name="fhlt_q21">
+                    <option value="finishing">finishing</option>
+                    <option value="taking">taking</option>
+                    <option value="learning">learning</option>
+                </select>
+                any over-the-counter medicines</p>
+        </div>
 
-            <div class="question">
-                <p>1. How useful do you feel the Internet is in helping you in making decisions about your health?</p>
+        <!-- HEALS.pdf -->
+        <h2>eHealth Literacy Scale</h2>
+        <p>I would like to ask you for your opinion and about your experience using the Internet for health information. For each statement, tell me which response best reflects your opinion and experience right now.</p>
+        <div class="question">
+            <p class="question-title">1. How useful do you feel the Internet is in helping you in making decisions about your health?</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q1" value="1"> Not useful at all</label>
                 <label><input type="radio" name="heals_q1" value="2"> Not useful</label>
                 <label><input type="radio" name="heals_q1" value="3"> Unsure</label>
                 <label><input type="radio" name="heals_q1" value="4"> Useful</label>
                 <label><input type="radio" name="heals_q1" value="5"> Very Useful</label>
             </div>
-
-            <div class="question">
-                <p>2. How important is it for you to be able to access health resources on the Internet?</p>
+        </div>
+        <div class="question">
+            <p class="question-title">2. How important is it for you to be able to access health resources on the Internet?</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q2" value="1"> Not important at all</label>
                 <label><input type="radio" name="heals_q2" value="2"> Not important</label>
                 <label><input type="radio" name="heals_q2" value="3"> Unsure</label>
                 <label><input type="radio" name="heals_q2" value="4"> Important</label>
                 <label><input type="radio" name="heals_q2" value="5"> Very important</label>
             </div>
-
-            <div class="question">
-                <p>3. I know <strong>what</strong> health resources are available on the Internet</p>
+        </div>
+        <div class="question">
+            <p class="question-title">3. I know <strong>what</strong> health resources are available on the Internet</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q3" value="1"> Strongly Disagree</label>
                 <label><input type="radio" name="heals_q3" value="2"> Disagree</label>
                 <label><input type="radio" name="heals_q3" value="3"> Undecided</label>
                 <label><input type="radio" name="heals_q3" value="4"> Agree</label>
                 <label><input type="radio" name="heals_q3" value="5"> Strongly Agree</label>
             </div>
-            <div class="question">
-                <p>4. I know <strong>where</strong> to find helpful health resources on the Internet</p>
+        </div>
+        <div class="question">
+            <p class="question-title">4. I know <strong>where</strong> to find helpful health resources on the Internet</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q4" value="1"> Strongly Disagree</label>
                 <label><input type="radio" name="heals_q4" value="2"> Disagree</label>
                 <label><input type="radio" name="heals_q4" value="3"> Undecided</label>
                 <label><input type="radio" name="heals_q4" value="4"> Agree</label>
                 <label><input type="radio" name="heals_q4" value="5"> Strongly Agree</label>
             </div>
-            <div class="question">
-                <p>5. I know <strong>how</strong> to find helpful health resources on the Internet</p>
+        </div>
+        <div class="question">
+            <p class="question-title">5. I know <strong>how</strong> to find helpful health resources on the Internet</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q5" value="1"> Strongly Disagree</label>
                 <label><input type="radio" name="heals_q5" value="2"> Disagree</label>
                 <label><input type="radio" name="heals_q5" value="3"> Undecided</label>
                 <label><input type="radio" name="heals_q5" value="4"> Agree</label>
                 <label><input type="radio" name="heals_q5" value="5"> Strongly Agree</label>
             </div>
-            <div class="question">
-                <p>6. I know <strong>how to use</strong> the Internet to answer my questions about health</p>
+        </div>
+        <div class="question">
+            <p class="question-title">6. I know <strong>how to use</strong> the Internet to answer my questions about health</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q6" value="1"> Strongly Disagree</label>
                 <label><input type="radio" name="heals_q6" value="2"> Disagree</label>
                 <label><input type="radio" name="heals_q6" value="3"> Undecided</label>
                 <label><input type="radio" name="heals_q6" value="4"> Agree</label>
                 <label><input type="radio" name="heals_q6" value="5"> Strongly Agree</label>
             </div>
-            <div class="question">
-                <p>7. I know how to use the <strong>health information</strong> I find on the Internet to help me</p>
+        </div>
+        <div class="question">
+            <p class="question-title">7. I know how to use the <strong>health information</strong> I find on the Internet to help me</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q7" value="1"> Strongly Disagree</label>
                 <label><input type="radio" name="heals_q7" value="2"> Disagree</label>
                 <label><input type="radio" name="heals_q7" value="3"> Undecided</label>
                 <label><input type="radio" name="heals_q7" value="4"> Agree</label>
                 <label><input type="radio" name="heals_q7" value="5"> Strongly Agree</label>
             </div>
-            <div class="question">
-                <p>8. I have the skills I need to <strong>evaluate</strong> the health resources I find on the Internet</p>
+        </div>
+        <div class="question">
+            <p class="question-title">8. I have the skills I need to <strong>evaluate</strong> the health resources I find on the Internet</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q8" value="1"> Strongly Disagree</label>
                 <label><input type="radio" name="heals_q8" value="2"> Disagree</label>
                 <label><input type="radio" name="heals_q8" value="3"> Undecided</label>
                 <label><input type="radio" name="heals_q8" value="4"> Agree</label>
                 <label><input type="radio" name="heals_q8" value="5"> Strongly Agree</label>
             </div>
-            <div class="question">
-                <p>9. I can tell <strong>high quality</strong> health resources from <strong>low quality</strong> health resources on the Internet</p>
+        </div>
+        <div class="question">
+            <p class="question-title">9. I can tell <strong>high quality</strong> health resources from <strong>low quality</strong> health resources on the Internet</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q9" value="1"> Strongly Disagree</label>
                 <label><input type="radio" name="heals_q9" value="2"> Disagree</label>
                 <label><input type="radio" name="heals_q9" value="3"> Undecided</label>
                 <label><input type="radio" name="heals_q9" value="4"> Agree</label>
                 <label><input type="radio" name="heals_q9" value="5"> Strongly Agree</label>
             </div>
-            <div class="question">
-                <p>10. I feel <strong>confident</strong> in using information from the Internet to make health decisions</p>
+        </div>
+        <div class="question">
+            <p class="question-title">10. I feel <strong>confident</strong> in using information from the Internet to make health decisions</p>
+            <div class="options">
                 <label><input type="radio" name="heals_q10" value="1"> Strongly Disagree</label>
                 <label><input type="radio" name="heals_q10" value="2"> Disagree</label>
                 <label><input type="radio" name="heals_q10" value="3"> Undecided</label>
@@ -508,78 +523,94 @@
             </div>
         </div>
 
-        <div class="section" id="numi">
-            <h2>Part 4: Numeracy Understanding in Medicine Instrument (NUMI)</h2>
-
-            <div class="question">
-                <p>1. James has diabetes. His goal is to have his blood sugar between 80 mg/dL and 150 mg/dL in the morning. Which of the following blood sugar readings is within his goal?</p>
+        <!-- NUMI.pdf -->
+        <h2>Numeracy Understanding in Medicine Instrument: Short Form</h2>
+        <div class="question">
+            <p class="question-title">1. James has diabetes. His goal is to have his blood sugar between 80 mg/dL and 150 mg/dL in the morning. Which of the following blood sugar readings is within his goal?</p>
+            <div class="options">
                 <label><input type="radio" name="numi_q1" value="a"> a. 55 mg/dL</label>
                 <label><input type="radio" name="numi_q1" value="b"> b. 140 mg/dL</label>
                 <label><input type="radio" name="numi_q1" value="c"> c. 165 mg/dL</label>
                 <label><input type="radio" name="numi_q1" value="d"> d. 180 mg/dL</label>
             </div>
-
-            <div class="question">
-                <p>2. Nathan has a pain rating of 5 on a pain scale of 1 (no pain) to 10 (worst possible pain). One day later Nathan still has pain but not as much. Now, what pain rating might Nathan give?</p>
+        </div>
+        <div class="question">
+            <p class="question-title">2. Nathan has a pain rating of 5 on a pain scale of 1 (no pain) to 10 (worst possible pain). One day later Nathan still has pain but not as much. Now, what pain rating might Nathan give?</p>
+            <div class="options">
                 <label><input type="radio" name="numi_q2" value="a"> a. 3</label>
                 <label><input type="radio" name="numi_q2" value="b"> b. 5</label>
                 <label><input type="radio" name="numi_q2" value="c"> c. 7</label>
                 <label><input type="radio" name="numi_q2" value="d"> d. 9</label>
             </div>
-
-            <div class="question">
-                <p>3. Frank has a test done to look for blockages in the arteries of his heart. The doctor said that a person with a higher percent (%) blockage has a high chance of having a heart attack. Which percent (%) blockage has the highest chance of a heart attack?</p>
+        </div>
+        <div class="question">
+            <p class="question-title">3. Frank has a test done to look for blockages in the arteries of his heart. The doctor said that a person with a higher percent (%) blockage has a high chance of having a heart attack. Which percent (%) blockage has the highest chance of a heart attack?</p>
+            <div class="options">
                 <label><input type="radio" name="numi_q3" value="a"> a. 33%</label>
                 <label><input type="radio" name="numi_q3" value="b"> b. 50%</label>
                 <label><input type="radio" name="numi_q3" value="c"> c. 75%</label>
                 <label><input type="radio" name="numi_q3" value="d"> d. 99%</label>
             </div>
-
-            <div class="question">
-                <p>4. Natasha started a new medicine that may cause the side effects listed below. Which side effect is Natasha least likely to have?</p>
-                <img src="Question 4.png" alt="Question 4 image">
+        </div>
+        <div class="question">
+            <p class="question-title">4. Natasha started a new medicine that may cause the side effects listed below. Which side effect is Natasha least likely to have?</p>
+            <div class="image-container">
+                <img src="Question 4.png" alt="Side effects chart">
             </div>
-
-            <div class="question">
-                <p>5. James starts a new blood pressure medicine. The chance of a serious side effect is 0.5%. If 1000 people take this medicine, about how many would be expected to have a serious side effect?</p>
+            <div class="options">
+                <label><input type="radio" name="numi_q4" value="a"> a. Dizziness</label>
+                <label><input type="radio" name="numi_q4" value="b"> b. Nausea</label>
+                <label><input type="radio" name="numi_q4" value="c"> c. Stomach pain</label>
+                <label><input type="radio" name="numi_q4" value="d"> d. Allergic reaction</label>
+            </div>
+        </div>
+        <div class="question">
+            <p class="question-title">5. James starts a new blood pressure medicine. The chance of a serious side effect is 0.5%. If 1000 people take this medicine, about. how many would be expected to have a serious side effect?</p>
+            <div class="options">
                 <label><input type="radio" name="numi_q5" value="a"> a. 1 person</label>
                 <label><input type="radio" name="numi_q5" value="b"> b. 5 people</label>
                 <label><input type="radio" name="numi_q5" value="c"> c. 50 people</label>
                 <label><input type="radio" name="numi_q5" value="d"> d. 500 people</label>
             </div>
-
-            <div class="question">
-                <p>6. The PSA (prostate specific antigen) is a blood test that looks for prostate cancer. The test has false alarms so about 30% of men who have an abnormal test turn out not to have prostate cancer. John has an abnormal test. What is the chance that John has prostate cancer?</p>
+        </div>
+        <div class="question">
+            <p class="question-title">6. The PSA (prostate specific antigen) is a blood test that looks for prostate cancer. The test has false alarms so about 30% of men who have an abnormal test turn out not to have prostate cancer. John has an abnormal test. What is the chance that John has prostate cancer?</p>
+            <div class="options">
                 <label><input type="radio" name="numi_q6" value="a"> a. 0%</label>
                 <label><input type="radio" name="numi_q6" value="b"> b. 30%</label>
                 <label><input type="radio" name="numi_q6" value="c"> c. 70%</label>
                 <label><input type="radio" name="numi_q6" value="d"> d. 100%</label>
             </div>
-
-            <div class="question">
-                <p>7. A study found that a new diabetes medicine led to control of blood sugar in 8% more patients than the old medicine. This difference was statistically significant (p=0.05). The likelihood that this finding was due to chance alone is best described as less than:</p>
+        </div>
+        <div class="question">
+            <p class="question-title">7. A study found that a new diabetes medicine led to control of blood sugar in 8% more patients than the old medicine. This difference was statistically significant (p=0.05). The likelihood that this finding was due to chance alone is best described as less than:</p>
+            <div class="options">
                 <label><input type="radio" name="numi_q7" value="a"> a. 1 in 5</label>
                 <label><input type="radio" name="numi_q7" value="b"> b. 1 in 10</label>
                 <label><input type="radio" name="numi_q7" value="c"> c. 1 in 15</label>
                 <label><input type="radio" name="numi_q7" value="d"> d. 1 in 20</label>
             </div>
-
-            <div class="question">
-                <p>8. A nutrition label is shown below. How many calories did Mary eat if she had 2 cups of food?</p>
-                <img src="Question 8.png" alt="Question 8 image">
+        </div>
+        <div class="question">
+            <p class="question-title">8. A nutrition label is shown below. How many calories did Mary eat if she had 2 cups of food?</p>
+            <div class="image-container">
+                <img src="Question 8.png" alt="Nutrition label">
+            </div>
+            <div class="options">
+                <label><input type="radio" name="numi_q8" value="a"> a. 140 calories</label>
+                <label><input type="radio" name="numi_q8" value="b"> b. 280 calories</label>
+                <label><input type="radio" name="numi_q8" value="c"> c. 560 calories</label>
+                <label><input type="radio" name="numi_q8" value="d"> d. 680 calories</label>
             </div>
         </div>
 
-        <div class="section">
-            <h3>End of Survey</h3>
-            <p>Thank you for participating in this survey.</p>
-            <p>As a thank you we would like offer you a £15 voucher for your time. If you would like to receive the voucher, please input the email address you would like the voucher to be sent to. You will receive your voucher within 5 working days.</p>
-            <label for="email">Answer: [email address]</label>
-            <input type="email" id="email" name="email">
-        </div>
+        <h2>End</h2>
+        <p>Thank you for participating in this survey.</p>
+        <p>As a thank you we would like offer you a £15 voucher for your time. If you would like to receive the voucher, please input the email address you would like the voucher to be sent to. You will receive your voucher within 5 working days.</p>
+        <label for="email">Answer: </label><input type="email" id="email" name="email">
 
-        <button type="submit">Submit</button>
-
+        <br><br>
+        <input type="submit" value="Submit">
     </form>
 
     <script>
@@ -589,19 +620,13 @@
             event.preventDefault();
 
             const endTime = new Date();
-            const timeDiff = endTime - startTime; //in milliseconds
+            const timeDiff = endTime - startTime; //in ms
             const seconds = Math.round(timeDiff / 1000);
             const minutes = Math.floor(seconds / 60);
             const remainingSeconds = seconds % 60;
 
-            const timeString = `${minutes} minutes and ${remainingSeconds} seconds`;
-
-            alert(`Thank you for completing the survey.\n\nTime taken: ${timeString}.\n\nPlease email this time to rmhical@ucl.ac.uk`);
-
-            // You can uncomment the line below to submit the form after the user sees the alert.
-            // event.target.submit();
+            alert(`Thank you for completing the questionnaire!\n\nTime taken: ${minutes} minutes and ${remainingSeconds} seconds.\n\nPlease email your results to rmhical@ucl.ac.uk`);
         });
     </script>
-
 </body>
 </html>
